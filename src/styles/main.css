@@ -1,0 +1,254 @@
+.kanban {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px 19px 20px;
+  background-color: #0079BF;
+}
+
+.kanban__content {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1770px;
+}
+
+.task-content {
+  width: 100%;
+  height: fit-content;
+  padding: 12px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+  background-color: #EBECF0;
+  border-radius: 10px;
+}
+
+.task-content:not(:first-child) {
+  margin-left: 24px;
+}
+
+.task-content__title {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.task-item {
+  position: relative;
+}
+
+.task-item__content {
+  position: relative;
+  padding: 15px 14px;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  opacity: 1;
+}
+
+.task-item__content:hover {
+  outline: 1px solid #0079BF;
+  border-radius: 5px;
+}
+
+.task-item__content_delete-target {
+  transition: opacity 0.3s;
+  opacity: 0.5;
+  outline: 1px solid brown;
+  border-radius: 5px;
+}
+
+.task-item__title {
+  display: block;
+}
+
+.task-item__task-executor {
+  display: inline-block;
+  margin-top: 5px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.25);
+}
+
+.task-item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.task-content__form {
+  margin-top: 22px;
+}
+
+.task-content__form_disabled {
+  display: none;
+}
+
+.task-content__input {
+  margin-bottom: 6px;
+}
+
+.task-content__btn-add {
+  display: flex;
+  align-items: baseline;
+  column-gap: 4px;
+  width: 35%;
+  margin: 14px 0px 5px 0px;
+  padding: 3px 0px 3px 2px;
+  color: #5E6C84;
+  transition: color 0.4s;
+}
+
+.task-content__btn-add:hover{
+  color : hsl(180, 100%, 30%);
+}
+
+.task-content__btn-add > svg > path {
+  fill: #5E6C84;
+  transition: fill 0.8s;
+}
+
+.task-content__btn-add:hover > svg > path {
+  fill: hsl(180, 100%, 30%);
+}
+
+.task-content__btn-add_disabled {
+  display: none;
+}
+
+.btn_error {
+  transition: color 0.2s;
+}
+
+.btn_error > svg > path {
+  transition: fill 0.2s;
+}
+
+.btn_error:hover > svg > path {
+  fill: hsl(0, 100%, 30%);
+}
+
+.btn_error {
+  color: hsl(0, 100%, 30%);
+}
+
+.btn_error:hover {
+  color: hsl(0, 100%, 30%);
+}
+
+.task-content__btn-submit {
+  width: 35%;
+  text-align: center;
+  margin: 14px 0px 5px 0px;
+  padding: 3px 0px 3px 2px;
+  background: #0079BF;
+  border-radius: 5px;
+  color: #FFFFFF;
+}
+
+.task-item__delete-btn {
+  z-index: 2;
+  position: absolute;
+  bottom: 12px;
+  right: 18px;
+}
+
+.task-item__delete-btn {
+  padding: 2px 4px;
+  font-weight: 500;
+  font-size: 18px;
+  color: hsla(0, 100%, 30%);
+  outline: 1px solid;
+  transition: outline-color 0.4s;
+  outline-color: hsla(0, 100%, 30%, 1);
+  border-radius: 5px;
+}
+
+.task-item__delete-btn:hover {
+  outline: 1px solid;
+  outline-color: hsla(0, 100%, 30%, 0);
+}
+
+.tasks-state-panel {
+  padding: 17px 21px;
+  display: flex;
+  flex-direction: row;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #FFFFFF;
+  background-color: #0067A3;
+}
+
+.tasks-state-panel__list {
+  display: flex;
+  flex-direction: row;
+  column-gap: 36px;
+}
+
+.tasks-state-panel__name {
+  margin-left: auto;
+}
+
+.task-info {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 25;
+  padding: 22px 0px 22px 28px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+}
+
+.task-info_active {
+  display: block;
+}
+
+.task-info__exit-btn {
+  position: absolute;
+  top: 17px;
+  right: 23px;
+}
+
+.task-info__title {
+  display: block;
+  max-width: 60%;
+  margin-bottom: 35px;
+  font-family: "Roboto";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.task-info__description {
+  max-width: 60%;
+  margin: 0px;
+  font-family: "Roboto";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.task-info__title-change-input {
+  position: absolute;
+  max-width: 60%;
+  top: 22px;
+}
+
+.task-info__description-change-textarea {
+  max-width: 60%;
+  min-height: 2000px;
+}
